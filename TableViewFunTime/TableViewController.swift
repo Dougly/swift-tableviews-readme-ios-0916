@@ -55,7 +55,10 @@ class TableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-                
+        
+        print("section: \(indexPath.section) -- row: \(indexPath.row)")
+        
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "basicCell", for: indexPath)
 
         let favoriteSong = favoriteSongs[(indexPath as NSIndexPath).row]
